@@ -1,0 +1,183 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Roboto', sans-serif;
+}
+header{
+    min-height: 100vh;
+    background-image:linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)), url('./hero-bcg.jpeg');
+    background-size: cover;
+    background-position: center center;
+    color:white;
+}
+.nav-container{
+    width:90%;
+    margin:auto;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding:1rem 1.5rem;
+}
+.header-logo img{
+    height:50px;
+}
+.links li{
+    display:inline-block;
+}
+.links li a{
+    text-decoration: none;
+    color:white;
+    text-transform: capitalize;
+    font-size:1.2rem;
+    font-weight: 500;
+    padding:0 1rem;
+    letter-spacing: 2px;
+}
+.banner{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:50%;
+    margin:auto;
+    min-height:100vh;
+   text-align: center;
+   letter-spacing: 2px;
+}
+.banner-container h1{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+.banner-container p{
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    line-height: 1.5rem;
+}
+.btn{
+    display: inline-block;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-decoration: none;
+    color:white;
+    border:2px solid white;
+    padding:10px 20px;
+    background: none;
+    transition:all 0.5s ease;
+    letter-spacing: 2px;
+}
+.btn:hover{
+    background: white;
+    color:#49a6e9;
+}
+.section{
+    height:80vh;
+}
+.section h2{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+.section h2 span{
+    color:#40cfd4;
+}
+#about,
+#tours{
+    background:#f1f5f8;
+}
+footer{
+    padding:5rem 1rem;
+    background-color: #102a42;
+    color:white;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+.top-link{
+    position: fixed;
+    bottom:3rem;
+    right:3rem;
+    background:#40cfd4;
+    width:2rem;
+    height:2rem;
+    line-height: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color:white;
+    border-radius: 5px;
+    animation: scalling 2s ease-in-out infinite;
+    opacity:0;
+    pointer-events: none;
+}
+@keyframes scalling{
+    0%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.5);
+    }
+    100%{
+        transform: scale(1);;
+    }
+}
+
+.fixnav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: white;
+    width: 100%;
+}
+.fixnav .links li a{
+    color:#102a42;
+}
+.fixnav .links li a:hover{
+    color:#40cfd4;
+}
+
+.showlink{
+    opacity: 1;
+    pointer-events: all;
+}
+.btn-bar{
+    background: none;
+    font-size: 1.5rem;
+    color:#102a42;
+    border:none;
+    cursor: pointer;
+    display:none;
+}
+
+@media screen and (max-width: 800px) {
+    .btn-bar{
+        display: flex;
+    }
+    .nav-container{
+        background-color: white;
+        width:100%;
+        margin:0;
+        box-sizing: border-box;
+        transition: all 0.5s ease;
+       
+    }
+    .links-container{
+        flex:100%;
+        width:100%;
+        overflow: hidden;
+        height:0;
+        transition: all 0.5s ease;
+    }
+    .links-container ul{
+        display:flex;
+        flex-direction: column;
+       
+        background: white;
+    }
+    .links li a{
+        display:block;
+        color:#617d98;
+        font-size:1.1rem;
+        padding:0.75rem 0;
+    }
+}
