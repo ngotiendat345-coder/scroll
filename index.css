@@ -25,6 +25,7 @@ header{
 .links li{
     display:inline-block;
 }
+
 .links li a{
     text-decoration: none;
     color:white;
@@ -110,6 +111,9 @@ footer{
     opacity:0;
     pointer-events: none;
 }
+.top-link i{
+    pointer-events: none;
+}
 @keyframes scalling{
     0%{
         transform:scale(1);
@@ -132,7 +136,8 @@ footer{
 .fixnav .links li a{
     color:#102a42;
 }
-.fixnav .links li a:hover{
+.fixnav .links li a:hover,
+.fixnav .links li .active{
     color:#40cfd4;
 }
 
